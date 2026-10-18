@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resmi Rajendran Nair — Product Management Leader</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            bg: '#f5f5f7',
+                            darkBg: '#000000',
+                            cardLight: 'rgba(255, 255, 255, 0.8)',
+                            cardDark: 'rgba(28, 28, 30, 0.8)',
+                            blue: '#0071e3',
+                            blueHover: '#0077ed',
+                            grayText: '#86868b',
+                            darkText: '#1d1d1f',
+                            lightText: '#f5f5f7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom Glassmorphism Effects */
+        .apple-glass {
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .dark .apple-glass {
+            background: rgba(22, 22, 23, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .apple-card {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .apple-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(156, 163, 175, 0.5);
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(107, 114, 128, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-[#f5f5f7] dark:bg-black text-[#1d1d1f] dark:text-[#f5f5f7] font-sans antialiased transition-colors duration-300">
+
+    <!-- Header / Translucent Apple Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 apple-glass border-b border-black/5 dark:border-white/10 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between text-xs sm:text-sm font-medium">
+            <a href="#" class="font-semibold text-base tracking-tight hover:opacity-80 transition-opacity flex items-center gap-2">
+                <i class="fa-solid fa-cube text-apple-blue"></i>
+                <span>Resmi R. Nair</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-apple-grayText dark:text-gray-400">
+                <a href="#about" class="hover:text-black dark:hover:text-white transition-colors">About</a>
+                <a href="#experience" class="hover:text-black dark:hover:text-white transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-black dark:hover:text-white transition-colors">Skills & Certifications</a>
+                <a href="#education" class="hover:text-black dark:hover:text-white transition-colors">Education</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="mailto:iamresmiraj@gmail.com" class="hidden sm:inline-flex items-center justify-center px-3 py-1 rounded-full bg-apple-blue text-white text-xs font-medium hover:bg-apple-blueHover transition-colors shadow-sm">
+                    Contact
+                </a>
+                <!-- Dark / Light Mode Toggle -->
+                <button id="theme-toggle" aria-label="Toggle Theme" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+                    <i id="theme-toggle-dark-icon" class="hidden fa-solid fa-moon text-gray-300"></i>
+                    <i id="theme-toggle-light-icon" class="hidden fa-solid fa-sun text-yellow-500"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="about" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-16 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 dark:bg-white/10 text-xs font-medium text-apple-grayText dark:text-gray-300 mb-6">
+                <i class="fa-solid fa-location-dot text-apple-blue"></i>
+                Copenhagen, Capital Region of Denmark
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-black dark:text-white mb-4">
+                Resmi Rajendran Nair
+            </h1>
+            
+            <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-apple-blue via-indigo-500 to-purple-500 bg-clip-text text-transparent max-w-3xl mx-auto mb-8">
+                Product Management &bull; FinTech &bull; Digital Transformation
+            </p>
+
+            <p class="text-base sm:text-lg text-apple-grayText dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
+                Passionate Product Professional experienced in creating digital products with a focus on solving customer & business problems. Worked primarily in Logistics and Supply Chain Management domains with a strong focus on Financial Solutions.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="mailto:iamresmiraj@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-apple-blue text-white text-sm font-medium hover:bg-apple-blueHover transition-all shadow-md hover:shadow-lg">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Get in Touch</span>
+                </a>
+                <a href="https://www.linkedin.com/in/resmirajnair" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 text-sm font-medium hover:bg-gray-50 dark:hover:bg-neutral-700 transition-all shadow-sm">
+                    <i class="fa-brands fa-linkedin text-[#0A66C2]"></i>
+                    <span>LinkedIn Profile</span>
+                </a>
+            </div>
+
+            <!-- Focus Areas Badges -->
+            <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <div class="p-5 rounded-2xl bg-white/70 dark:bg-neutral-900/70 border border-black/5 dark:border-white/10 text-left apple-card backdrop-blur-md">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/50 flex items-center justify-center text-apple-blue mb-3">
+                        <i class="fa-solid fa-users text-lg"></i>
+                    </div>
+                    <h2 class="font-semibold text-sm mb-1 text-black dark:text-white">Customer Behavior</h2>
+                    <p class="text-xs text-apple-grayText dark:text-gray-400">Understanding user needs, conducting elicitation workshops & improving UX.</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-white/70 dark:bg-neutral-900/70 border border-black/5 dark:border-white/10 text-left apple-card backdrop-blur-md">
+                    <div class="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-950/50 flex items-center justify-center text-purple-500 mb-3">
+                        <i class="fa-solid fa-rocket text-lg"></i>
+                    </div>
+                    <h2 class="font-semibold text-sm mb-1 text-black dark:text-white">Build & Ship</h2>
+                    <p class="text-xs text-apple-grayText dark:text-gray-400">End-to-end product strategy, agile execution, and seamless platform deliveries.</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-white/70 dark:bg-neutral-900/70 border border-black/5 dark:border-white/10 text-left apple-card backdrop-blur-md">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center text-emerald-500 mb-3">
+                        <i class="fa-solid fa-chart-line text-lg"></i>
+                    </div>
+                    <h2 class="font-semibold text-sm mb-1 text-black dark:text-white">Technology at Scale</h2>
+                    <p class="text-xs text-apple-grayText dark:text-gray-400">Leveraging enterprise architecture, SAP integration, & data analytics to grow.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="mb-12 text-center sm:text-left">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-black dark:text-white mb-2">Work Experience</h2>
+                <p class="text-apple-grayText dark:text-gray-400 text-sm sm:text-base">A decade-plus journey leading product design, digital transformation, and finance solutions.</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Company 1: Maersk -->
+                <div class="bg-white/80 dark:bg-neutral-900/80 rounded-3xl p-6 sm:p-8 border border-black/5 dark:border-white/10 shadow-sm backdrop-blur-md">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-6 border-b border-gray-200 dark:border-neutral-800">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950 flex items-center justify-center text-sky-600 font-bold text-lg">
+                                    M
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-black dark:text-white">A.P. Moller - Maersk</h3>
+                                    <p class="text-xs text-apple-grayText dark:text-gray-400">9 years 9 months &bull; Copenhagen, Denmark</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="inline-flex self-start sm:self-center px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300 text-xs font-medium">
+                            Primary Enterprise Tenure
+                        </span>
+                    </div>
+
+                    <!-- Roles inside Maersk -->
+                    <div class="mt-6 space-y-6 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-gray-200 dark:before:bg-neutral-800">
+                        
+                        <!-- Role 1 -->
+                        <div class="relative pl-8">
+                            <span class="absolute left-2 top-1.5 -translate-x-1/2 w-3 h-3 rounded-full bg-apple-blue border-2 border-white dark:border-neutral-900"></span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                                <h4 class="font-semibold text-base text-black dark:text-white">Sr Product Manager, Network Design & Data Analytics</h4>
+                                <span class="text-xs font-medium text-apple-grayText dark:text-gray-400">June 2023 - Present</span>
+                            </div>
+                            <p class="text-xs text-apple-grayText dark:text-gray-400 font-medium mb-2">Network Design & Analytics</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Directing product strategy for network optimization and data analytics platforms to improve efficiency and operational visibility.</p>
+                        </div>
+
+                        <!-- Role 2 -->
+                        <div class="relative pl-8">
+                            <span class="absolute left-2 top-1.5 -translate-x-1/2 w-3 h-3 rounded-full bg-gray-400 dark:bg-neutral-600 border-2 border-white dark:border-neutral-900"></span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                                <h4 class="font-semibold text-base text-black dark:text-white">Sr. Platform Product Owner, SCM Financial Operations, Freight Audit & Payment</h4>
+                                <span class="text-xs font-medium text-apple-grayText dark:text-gray-400">April 2021 - June 2023</span>
+                            </div>
+                            <ul class="text-sm text-gray-600 dark:text-gray-300 list-disc list-inside space-y-1">
+                                <li>Led the digitization and automation of key financial operations integrated with SAP S/4HANA.</li>
+                                <li>Pioneered the digitization of Freight Audit & Payment solutions tailored for global Maersk customers.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 3 -->
+                        <div class="relative pl-8">
+                            <span class="absolute left-2 top-1.5 -translate-x-1/2 w-3 h-3 rounded-full bg-gray-400 dark:bg-neutral-600 border-2 border-white dark:border-neutral-900"></span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                                <h4 class="font-semibold text-base text-black dark:text-white">Project Manager / Scrum Master</h4>
+                                <span class="text-xs font-medium text-apple-grayText dark:text-gray-400">Dec 2020 - April 2021</span>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Provided agile coaching and tool strategy for the Finance & Tax Platform and Treasury teams. Managed delivery for Tax Engine Implementation.</p>
+                        </div>
+
+                        <!-- Role 4 -->
+                        <div class="relative pl-8">
+                            <span class="absolute left-2 top-1.5 -translate-x-1/2 w-3 h-3 rounded-full bg-gray-400 dark:bg-neutral-600 border-2 border-white dark:border-neutral-900"></span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                                <h4 class="font-semibold text-base text-black dark:text-white">Product Manager, Enterprise Document Management Platform</h4>
+                                <span class="text-xs font-medium text-apple-grayText dark:text-gray-400">April 2019 - Dec 2020</span>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Established an Enterprise Document Management Platform catering to document storage, generation, OCR, and archival needs of Maersk. Led global RFP process and implementation.</p>
+                        </div>
+
+                        <!-- Role 5 -->
+                        <div class="relative pl-8">
+                            <span class="absolute left-2 top-1.5 -translate-x-1/2 w-3 h-3 rounded-full bg-gray-400 dark:bg-neutral-600 border-2 border-white dark:border-neutral-900"></span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                                <h4 class="font-semibold text-base text-black dark:text-white">Technical Product Manager - My Finance</h4>
+                                <span class="text-xs font-medium text-apple-grayText dark:text-gray-400">March 2018 - April 2019</span>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Led the revamping of SAP Finance integrated payment portal 'My Finance', providing Maersk Customers a seamless end-to-end experience in receiving and paying invoices.</p>
+                        </div>
+
+                        <!-- Role 6 -->
+                        <div class="relative pl-8">
+                            <span class="absolute left-2 top-1.5 -translate-x-1/2 w-3 h-3 rounded-full bg-gray-400 dark:bg-neutral-600 border-2 border-white dark:border-neutral-900"></span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                                <h4 class="font-semibold text-base text-black dark:text-white">Business Analyst, Maersk Mobile App</h4>
+                                <span class="text-xs font-medium text-apple-grayText dark:text-gray-400">Feb 2017 - March 2018</span>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Devised data-backed engagement strategies that boosted overall mobile app engagement by 8%.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Company 2: UNICEF -->
+                <div class="bg-white/80 dark:bg-neutral-900/80 rounded-3xl p-6 sm:p-8 border border-black/5 dark:border-white/10 shadow-sm backdrop-blur-md">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-cyan-50 dark:bg-cyan-950 flex items-center justify-center text-cyan-600 font-bold text-lg">
+                                U
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-black dark:text-white">UNICEF</h3>
+                                <p class="text-xs text-apple-grayText dark:text-gray-400">Business Analyst &bull; Copenhagen Metropolitan Area</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-medium text-apple-grayText dark:text-gray-400">June 2014 - Jan 2017 (2 yrs 8 mos)</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 list-disc list-inside space-y-2 mt-4">
+                        <li>Part of the shipping process optimization team in the International Transport Unit, UNICEF Supply Division.</li>
+                        <li>Identified, mapped, and designed as-is and to-be business processes across logistics units.</li>
+                        <li>Conducted requirement elicitation workshops, creating functional requirement documents in close collaboration with IT.</li>
+                        <li>Participated in vendor selection processes and collaborated with external partners.</li>
+                    </ul>
+                </div>
+
+                <!-- Company 3: IBM -->
+                <div class="bg-white/80 dark:bg-neutral-900/80 rounded-3xl p-6 sm:p-8 border border-black/5 dark:border-white/10 shadow-sm backdrop-blur-md">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950 flex items-center justify-center text-blue-600 font-bold text-lg">
+                                IBM
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-black dark:text-white">IBM</h3>
+                                <p class="text-xs text-apple-grayText dark:text-gray-400">Project Manager, Delivery &bull; Bangalore, India</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-medium text-apple-grayText dark:text-gray-400">2011 - 2012 (1 yr)</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 dark:text-gray-300 list-disc list-inside space-y-2 mt-4">
+                        <li>Led Applications Support team responsible for incident management and enhancement based on ITIL methodologies.</li>
+                        <li>Managed resource allocation, planning, and prioritization of Change Requests through delivery.</li>
+                        <li>Implemented process improvements that reduced average ticket flow by 10-15%.</li>
+                    </ul>
+                </div>
+
+                <!-- Accordion for Older Work Experience -->
+                <div class="border border-black/5 dark:border-white/10 rounded-3xl overflow-hidden bg-white/50 dark:bg-neutral-900/50 backdrop-blur-md">
+                    <button id="toggle-older-exp" class="w-full p-6 text-left flex items-center justify-between font-semibold text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock-rotate-left text-apple-blue"></i>
+                            View Earlier Career Experience (Sonata Software & Avery Dennison)
+                        </span>
+                        <i id="accordion-arrow" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    
+                    <div id="older-exp-content" class="hidden p-6 pt-0 border-t border-gray-200 dark:border-neutral-800 space-y-6">
+                        <!-- Sonata Software -->
+                        <div class="pt-4">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                <h4 class="font-bold text-base text-black dark:text-white">Sonata Software — Team Leader, Business Analyst</h4>
+                                <span class="text-xs text-apple-grayText dark:text-gray-400">Nov 2005 - Aug 2011 (5 yrs 10 mos)</span>
+                            </div>
+                            <p class="text-xs text-apple-grayText dark:text-gray-400 mb-2">Bangalore, India</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Responsible for stakeholder management, requirements gathering, SRS/Use Cases generation, scope management, and onsite-offshore coordination.</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Active participant in CMMi initiatives; led team in CMMi SCAMPI, QA, and ISO audits.</p>
+                        </div>
+
+                        <!-- Avery Dennison -->
+                        <div class="border-t border-gray-100 dark:border-neutral-800 pt-4">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                <h4 class="font-bold text-base text-black dark:text-white">Avery Dennison — Functional Consultant</h4>
+                                <span class="text-xs text-apple-grayText dark:text-gray-400">2008 - 2009 (1 yr)</span>
+                            </div>
+                            <p class="text-xs text-apple-grayText dark:text-gray-400 mb-2">Leiden, The Netherlands</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Onsite coordinator and Functional Consultant for Avery Dennison Europe on behalf of Sonata Software. Handled requirement analysis, functional testing, UAT, and schedule adherence.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills, Languages & Certifications Section -->
+        <section id="skills" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="mb-12 text-center sm:text-left">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-black dark:text-white mb-2">Skills & Certifications</h2>
+                <p class="text-apple-grayText dark:text-gray-400 text-sm sm:text-base">Core competencies, certifications, and linguistic capabilities.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Top Skills -->
+                <div class="p-6 rounded-3xl bg-white/80 dark:bg-neutral-900/80 border border-black/5 dark:border-white/10 apple-card backdrop-blur-md">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-2xl bg-blue-50 dark:bg-blue-950 flex items-center justify-center text-apple-blue">
+                            <i class="fa-solid fa-sliders text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-black dark:text-white">Core Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-xl bg-gray-100 dark:bg-neutral-800 text-xs font-medium text-gray-800 dark:text-gray-200">Data Analysis</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-gray-100 dark:bg-neutral-800 text-xs font-medium text-gray-800 dark:text-gray-200">Product Management</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-gray-100 dark:bg-neutral-800 text-xs font-medium text-gray-800 dark:text-gray-200">Customer Satisfaction</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-gray-100 dark:bg-neutral-800 text-xs font-medium text-gray-800 dark:text-gray-200">Agile / Scrum</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-gray-100 dark:bg-neutral-800 text-xs font-medium text-gray-800 dark:text-gray-200">SAP S/4HANA</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-gray-100 dark:bg-neutral-800 text-xs font-medium text-gray-800 dark:text-gray-200">Digital Transformation</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-gray-100 dark:bg-neutral-800 text-xs font-medium text-gray-800 dark:text-gray-200">FinTech</span>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="p-6 rounded-3xl bg-white/80 dark:bg-neutral-900/80 border border-black/5 dark:border-white/10 apple-card backdrop-blur-md">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-2xl bg-amber-50 dark:bg-amber-950 flex items-center justify-center text-amber-500">
+                            <i class="fa-solid fa-certificate text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-black dark:text-white">Certifications</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs sm:text-sm">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                            <span class="font-medium text-gray-800 dark:text-gray-200">Professional Scrum Product Owner™ I (PSPO I)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                            <span class="font-medium text-gray-800 dark:text-gray-200">Influencing Others</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                            <span class="font-medium text-gray-800 dark:text-gray-200">Extreme Productivity (Blinkist)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Languages -->
+                <div class="p-6 rounded-3xl bg-white/80 dark:bg-neutral-900/80 border border-black/5 dark:border-white/10 apple-card backdrop-blur-md">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-2xl bg-emerald-50 dark:bg-emerald-950 flex items-center justify-center text-emerald-500">
+                            <i class="fa-solid fa-language text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-black dark:text-white">Languages</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>English</span>
+                                <span class="text-apple-grayText dark:text-gray-400">Full Professional</span>
+                            </div>
+                            <div class="w-full h-2 rounded-full bg-gray-200 dark:bg-neutral-800 overflow-hidden">
+                                <div class="h-full bg-apple-blue rounded-full w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Danish</span>
+                                <span class="text-apple-grayText dark:text-gray-400">Elementary</span>
+                            </div>
+                            <div class="w-full h-2 rounded-full bg-gray-200 dark:bg-neutral-800 overflow-hidden">
+                                <div class="h-full bg-emerald-500 rounded-full w-1/3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="mb-12 text-center sm:text-left">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-black dark:text-white mb-2">Education</h2>
+                <p class="text-apple-grayText dark:text-gray-400 text-sm sm:text-base">Academic foundations in Computer Science & Engineering.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Higher Education -->
+                <div class="p-6 sm:p-8 rounded-3xl bg-white/80 dark:bg-neutral-900/80 border border-black/5 dark:border-white/10 apple-card backdrop-blur-md flex gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950 flex-shrink-0 flex items-center justify-center text-indigo-500 text-xl font-bold">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-medium text-apple-blue">1999 - 2003</span>
+                        <h3 class="text-lg font-bold text-black dark:text-white mt-0.5">Bachelor of Technology (BTech)</h3>
+                        <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Computer Science and Engineering</p>
+                        <p class="text-xs text-apple-grayText dark:text-gray-400 mt-2">Cochin University of Science and Technology</p>
+                    </div>
+                </div>
+
+                <!-- Secondary Education -->
+                <div class="p-6 sm:p-8 rounded-3xl bg-white/80 dark:bg-neutral-900/80 border border-black/5 dark:border-white/10 apple-card backdrop-blur-md flex gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 dark:bg-purple-950 flex-shrink-0 flex items-center justify-center text-purple-500 text-xl font-bold">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-medium text-purple-500">Schooling</span>
+                        <h3 class="text-lg font-bold text-black dark:text-white mt-0.5">Higher Secondary Education</h3>
+                        <p class="text-xs text-apple-grayText dark:text-gray-400 mt-2">SVMMHS, Vendar, Kollam, Kerala, India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Contact Hub -->
+        <footer class="border-t border-black/5 dark:border-white/10 bg-white/40 dark:bg-neutral-900/40 backdrop-blur-md py-12 mt-12">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-2xl font-bold text-black dark:text-white mb-2">Connect with Resmi</h3>
+                <p class="text-xs sm:text-sm text-apple-grayText dark:text-gray-400 max-w-md mx-auto mb-6">Open for discussions on Product Strategy, Digital Transformation, and FinTech Innovation.</p>
+                
+                <div class="flex justify-center gap-4 mb-8">
+                    <a href="mailto:iamresmiraj@gmail.com" class="w-10 h-10 rounded-full bg-apple-blue text-white flex items-center justify-center hover:opacity-90 transition-opacity" title="Email Resmi">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/resmirajnair" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:opacity-90 transition-opacity" title="LinkedIn Profile">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <p class="text-xs text-apple-grayText dark:text-gray-500">&copy; Resmi Rajendran Nair. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Dark / Light Theme Toggle Setup
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Check system theme or stored theme
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            lightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            darkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // Experience Accordion Toggle
+        const olderExpBtn = document.getElementById('toggle-older-exp');
+        const olderExpContent = document.getElementById('older-exp-content');
+        const accordionArrow = document.getElementById('accordion-arrow');
+
+        olderExpBtn.addEventListener('click', () => {
+            olderExpContent.classList.toggle('hidden');
+            accordionArrow.classList.toggle('rotate-180');
+        });
+    </script>
+</body>
+</html>
